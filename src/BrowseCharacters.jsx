@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
-// import NavigationBar from "./NavigationBar";
+import NavigationBar from "./NavigationBar";
 
     class Characters extends Component {
     constructor(props){

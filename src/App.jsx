@@ -3,8 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import BrowseCharacters from './BrowseCharacters';
 import CharacterDetails from './CharacterDetails.jsx';
 import Comic from './Comic'; 
-import Home from './Home';
+
 import { NotFound } from './NotFound';
+import { Home } from './Home';
+import './App.css';
+
 
 function App() {
   return (
