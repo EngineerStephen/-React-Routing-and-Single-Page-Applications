@@ -63,13 +63,12 @@ import NavigationBar from "./NavigationBar";
             <NavigationBar />
             <h3>Characters</h3>
             <ul>
-            { characters.map(characters => (
+            {characters.map((character) => (
                 <li key={character.id} onClick={() => this.selectCharacter(character.id)}>
-                <Link to={`/edit-character/${character.id}`}>{character.name}</Link>
-
-                <button onClick={() => this.deleteCharacter(character.id)}>Delete</button>
-                                </li>
-            )) }
+                    <Link to={`/edit-character/${character.id}`}>{character.name}</Link>
+                    <button onClick={() => this.deleteCharacter(character.id)}>Delete</button>
+                </li>
+            ))}
             </ul>
 
         </div>

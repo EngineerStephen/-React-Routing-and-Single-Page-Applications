@@ -50,13 +50,17 @@ const CharacterDetails = () => {
             <NavigationBar />
             <h3>Character Details</h3>
             <ul>
-                {characters.map(character => (
-                    <li key={character.character_id}>
-                        <p>{character.name}: ${character.price}</p>
-                        <button onClick={() => navigate(`/edit-product/${character.character_id}`)}>Edit</button>
-                        <button onClick={() => deleteCharacterDetails(character.character_id)}>Delete</button>
-                    </li>
-                ))}
+                {characters.length > 0 ? (
+                    characters.map((character) => (
+                        <li key={character.character_id}>
+                            <p>{character.name}: ${character.price}</p>
+                            <button onClick={() => navigate(`/edit-product/${character.character_id}`)}>Edit</button>
+                            <button onClick={() => deleteCharacterDetails(character.character_id)}>Delete</button>
+                        </li>
+                    ))
+                ) : (
+                    <li>No characters found.</li>
+                )}
             </ul>
         </div>
     );
